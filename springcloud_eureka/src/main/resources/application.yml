@@ -1,0 +1,16 @@
+server:
+  port: 10086
+
+#给当前的工程起一个唯一标识，名字最好不要包含下划线
+spring:
+  application:
+    name: eureka-server
+
+#配置Eureka
+eureka:
+  client:
+    #配置Eureka注册中心的地址
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+    #配置当前的注册中心不能获取其他的微服务地址
+    fetch-registry: false
