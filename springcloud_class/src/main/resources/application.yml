@@ -1,8 +1,9 @@
 server:
-  port: 9090
+  port: 8081
+
 spring:
   application:
-    name: web-student
+    name: web-class
 eureka:
   client:
     service-url:
