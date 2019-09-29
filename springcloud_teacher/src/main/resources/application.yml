@@ -1,0 +1,24 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: web-teacher
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+feign:
+  hystrix:
+    enabled: true
+
+#hystrix的相关配置
+hystrix:
+  command:
+    default:
+      circuitBreaker:
+        #是否开启熔断器
+        enabled: true
+        #单位时间内，失败了多少次就会打开熔断器
+        requestVolumeThreshold: 2
+        #设置进入半开状态的毫秒数
+        sleepWindowInMilliseconds: 5000
