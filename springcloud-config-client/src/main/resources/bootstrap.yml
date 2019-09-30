@@ -1,0 +1,20 @@
+server:
+  port: 10010
+spring:
+  cloud:
+    config:
+      #配置文件的名称
+      name: application
+      #配置文件的后缀
+      profile: default
+      #统一配置中心的地址（不是github的地址）
+      uri: http://localhost:30000/
+      #git的分支
+      label: master
+
+#表示暴露相应的检查接口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ['*']

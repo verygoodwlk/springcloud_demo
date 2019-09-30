@@ -1,0 +1,16 @@
+server:
+  port: 30000
+spring:
+  cloud:
+    config:
+      server:
+        #配置文件保存到github
+        git:
+          uri: https://github.com/verygoodwlk/myconfig_1906.git
+#        #配置文件保存到本地
+#        native:
+#          search-locations:
+#        #配置文件保存到svn服务器
+#        svn:
+
+

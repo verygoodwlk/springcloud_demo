@@ -20,6 +20,7 @@ public class TeacherController {
     @RequestMapping("/queryTeacherStudent")
     @ResponseBody
     public String queryTeacherStudent(){
+        System.out.println("调用了教师的微服务");
 
         //调用学生微服务，查询所有学生信息
         String result = stuService.list();
